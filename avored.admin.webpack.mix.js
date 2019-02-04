@@ -16,4 +16,5 @@ mix.config.fileLoaderDirs.images    = 'vendor/avored-admin/images';
 
 mix.js('vendor/avored/framework/resources/js/app.js', 'public/vendor/avored-admin/js')
     .sass('vendor/avored/framework/resources/sass/app.scss', 'public/vendor/avored-admin/css')
+    .js('vendor/avored/framework/resources/js/vue.js', 'public/vendor/avored-admin/js/vue.js')
    // .copyDirectory('vendor/avored/framework/resources/assets/static/images','public/vendor/avored-admin/images');
