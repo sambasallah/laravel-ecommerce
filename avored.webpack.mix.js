@@ -16,6 +16,17 @@ mix.webpackConfig({
         chunkFilename: mix.inProduction() ? "avored-admin/js/chunk/[name].[chunkhash].js" : "avored-admin/js/chunk/[name].js",
     }
 })
+mix.webpackConfig({
+    module: {
+        rules: [
+            {
+                test: /\.(graphql|gql)$/,
+                exclude: /node_modules/,
+                loader: 'graphql-tag/loader'
+            }
+        ]
+    }
+});
 
 mix.js('packages/framework/resources/js/app.js', 'public/avored-admin/js/app.js');
 mix.less('packages/framework/resources/less/app.less', 'public/avored-admin/css/app.css', {
